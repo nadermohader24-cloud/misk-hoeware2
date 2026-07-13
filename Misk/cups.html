@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cups | Misk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<header>
+
+    <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="logo">
+        <h1>Misk</h1>
+        <span>مسك</span>
+    </div>
+
+    <div class="header-icons">
+
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <a href="favorites.html" class="favorite-link">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <span id="favorite-count">0</span>
+
+        </a>
+
+    </div>
+
+</header>
+
+<!-- Search -->
+
+<div class="search-box">
+<input type="text" placeholder="Search Cups...">
+</div>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+<div class="close-btn">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<a href="index.html">Home</a>
+<a href="index.html#about">About</a>
+<a href="categories.html">Categories</a>
+<a href="favorites.html">
+    <i class="fa-solid fa-heart"></i> Favorites
+</a>
+<a href="index.html#contact">Contact</a>
+</div>
+
+<!-- Hero -->
+
+<section class="cups-hero">
+<a href="categories.html" class="cups-back-btn">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<h1>Our Cups Collection</h1>
+
+<p>
+Discover our handmade glass cups, crafted with elegance and care.
+</p>
+
+</section>
+
+<!-- Products -->
+
+<section class="products-slider">
+    <div class="product-card">
+    <i class="fa-regular fa-heart favorite"></i>
+    <img src="images/Cup1.jpeg" id="cup1" data-current="images/Cup1.jpeg">
+    <p class="price">500 EGP</p>
+    <div class="colors">
+        <span class="color red"
+        onclick="changeImage('cup1','images/Cup1-red.jpeg')"></span>
+        <span class="color green"
+        onclick="changeImage('cup1','images/Cup1-green.jpeg')"></span>
+        <span class="color blue"
+        onclick="changeImage('cup1','images/Cup1-blue.jpeg')"></span>
+        <span class="color yellow"
+        onclick="changeImage('cup1','images/Cup1-yellow.jpeg')"></span>
+        <span class="color white"
+        onclick="changeImage('cup1','images/Cup1-white.jpeg')"></span>
+    </div>
+</div>
+
+    <a href="#" class="product-card">
+        <img src="images/Cup2.jpeg" alt="">
+        <p>500 EGP</p>
+    </a>
+
+    <a href="#" class="product-card">
+        <img src="images/Cup3.jpeg" alt="">
+        <p>500 EGP</p>
+    </a>
+
+    <a href="#" class="product-card">
+        <img src="images/Cup4.jpeg" alt="">
+        <p>500 EGP</p>
+    </a>
+
+    <a href="#" class="product-card">
+        <img src="images/Cup5.jpeg" alt="">
+        <p>500 EGP</p>
+    </a>
+</div>
+</section>
+
+<section class="misk-quote">
+
+    <h2>
+        Each piece at Misk Homeware is not just decoration—
+        it’s a story and a touch of elegance for your home.
+    </h2>
+
+</section>
+<!-- Custom Orders -->
+<section class="custom-orders">
+<h2>Custom Orders Available</h2>
+<p>
+Have a unique idea? We can create custom-made designs crafted especially for you.
+</p>
+<a href="https://wa.me/" class="custom-btn">
+Request Your Design
+</a>
+</section>
+<footer>
+<p>© 2026 Misk Store. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+<div id="toast"></div>
+</body>
+</html>
