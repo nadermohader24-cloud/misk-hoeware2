@@ -281,6 +281,21 @@ const favoritesList = document.getElementById("favorites-list");
 if (favoritesList) {
 
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const confirmBox = document.getElementById("confirm-box");
+
+if(confirmBox){
+
+    if(favorites.length === 0){
+
+        confirmBox.style.display = "none";
+
+    }else{
+
+        confirmBox.style.display = "block";
+
+    }
+
+}
 
     if (favorites.length === 0) {
 
@@ -326,6 +341,11 @@ if (favoritesList) {
     }
 
 }
+
+// ===========================
+// Remove Favorite
+// ===========================
+
 function removeFavorite(index){
 
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
@@ -333,12 +353,15 @@ function removeFavorite(index){
     favorites.splice(index,1);
 
     localStorage.setItem("favorites",JSON.stringify(favorites));
+
     updateFavoriteCount();
+
     showToast("Removed from Favorites ✖️");
-    
+
     location.reload();
 
 }
+
 // ===========================
 // Favorite Counter
 // ===========================
@@ -366,6 +389,10 @@ function updateFavoriteCount(){
 
 updateFavoriteCount();
 
+// ===========================
+// Toast
+// ===========================
+
 function showToast(message){
 
     const toast = document.getElementById("toast");
@@ -381,5 +408,23 @@ function showToast(message){
         toast.classList.remove("show");
 
     },2000);
+
+}
+
+// ===========================
+// Confirm Order
+// ===========================
+
+const confirmBtn = document.getElementById("confirmOrderBtn");
+
+if(confirmBtn){
+
+    confirmBtn.addEventListener("click", function(){
+
+        const phone = "20100000xxxx"; // حط رقم واتساب المحل
+
+        window.open(`https://wa.me/${phone}`);
+
+    });
 
 }
